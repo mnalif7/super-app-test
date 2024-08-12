@@ -16,13 +16,13 @@
 2. **Biggest Issue** I tried to implement parallel multi platform in this project. But I failed to do so, since the time is really short to explore such big configuration (for me). You can try to execute during the previous commit 'feat: multiremotebrowser'. The issue is the port management, since I cannot control the command to send only to one driver, so the Appium driver keeps crashing. The documentation from WDIO is not really helping also. In the end, I divided the config file to run in android and chrome, which not implementing multiplatform.
 3. I also happen to explore a simple swipe command. But I need more time to do that, since the native developed wdio command 'ScrollIntoView' seems like not working on Appium. The Solution will be using `action` command from native Appium. Which can be implemented later.
 4. I also stumble on API Implementation, since I usually use supertest. But seems like supertest is not really easy-to-use with Typescript. So I use Axios instead.
-5. This is my first time using webDriverIO. Thus, I need to explore from the basic furthermore on what I imagine I should do on developing test automation. Here are my thoughts about WebDriverIO.
-a. Object locator are relatively easy to declare
-b. The auto-generated project seems not really helping, if you are not experienced enough
-c. Documentation is not really good. Although they try, there are some sections that needed to be updated and does not work
-d. Execution is fast
-e. No built-in report from the start, even there are options during project building, although this is not really a big deal
-f. Simple swipe command still need to be resolved manually using native commands
-g. They keep retrying command that failed, to reduce flakiness
-h. This contradicts if we really want the test to be failed on several tries
-i. I need to explore more on important things such as TestHooks, Reports, Test Data, Folder Structures, etc.
+5. This is my first time using webDriverIO. Thus, I need to explore from the basic furthermore on what I imagine I should do on developing test automation. Here are my thoughts about WebDriverIO.<br>
+a. Object locator are relatively easy to declare <br>
+b. The auto-generated project seems not really helping, if you are not experienced enough <br>
+c. Documentation is not really good. Although they try, there are some sections that needed to be updated and does not work <br>
+d. Execution is fast <br>
+e. No built-in report from the start, even there are options during project building, although this is not really a big deal <br>
+f. Simple swipe command still need to be resolved manually using native commands <br>
+g. They keep retrying command that failed, to reduce flakiness <br>
+h. This contradicts if we really want the test to be failed on several tries <br>
+i. I need to explore more on important things such as TestHooks, Reports, Test Data, Folder Structures, etc. <br>
