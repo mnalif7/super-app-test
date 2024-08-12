@@ -6,22 +6,22 @@ import onboardingPage from '../pageobjects/onboarding.page.js';
  */
 class Login extends Step {
     public async setUsername(username: string | number) {
-        await onboardingPage.textboxUsername.getInstance('androidEmulator').setValue(username);
+        await onboardingPage.textboxUsername.setValue(username);
     }
     public async clickUsername() {
-        await onboardingPage.textboxUsername.getInstance('androidEmulator').click();
+        await onboardingPage.textboxUsername.click();
     }
 
     public async setPassword(password: string | number) {
-        await onboardingPage.textboxPassword.getInstance('androidEmulator').setValue(password);
+        await onboardingPage.textboxPassword.setValue(password);
     }
 
     public async clickPassword() {
-        await onboardingPage.textboxPassword.getInstance('androidEmulator').click();
+        await onboardingPage.textboxPassword.click();
     }
 
     public async clickLogin() {
-        await onboardingPage.buttonLogin.getInstance('androidEmulator').click();
+        await onboardingPage.buttonLogin.click();
     }
 
     public async login(username: string | number, password: string | number) {
@@ -29,7 +29,7 @@ class Login extends Step {
         await this.setUsername(username)
         await this.clickPassword()
         await this.setPassword(password)
-        await onboardingPage.buttonLogin.getInstance('androidEmulator').click();
+        await onboardingPage.buttonLogin.click();
     }
 }
 

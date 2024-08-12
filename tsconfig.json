@@ -28,6 +28,6 @@
     "include": [
         "test",
         "wdio.conf.ts",
-        "test/specs/test2.e2e.ts"
+        "test/specs/chrome/test2.e2e.ts"
     ]
 }

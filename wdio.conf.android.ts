@@ -13,7 +13,7 @@ export const config: Options.Testrunner = {
             transpileOnly: true
         }
     },
-    // path: '/wd/hub/',
+    path: '/wd/hub/',
     port: 4723,
     //
     // ==================
@@ -31,7 +31,7 @@ export const config: Options.Testrunner = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './test/specs/**/*.ts'
+        './test/specs/android/**/*.ts'
     ],
     // Patterns to exclude.
     exclude: [
@@ -61,7 +61,15 @@ export const config: Options.Testrunner = {
     //
     capabilities: [{
         // capabilities for local Appium web tests on an Android Emulator
-        browserName: 'chrome'
+
+        platformName: 'Android',
+        'appium:udid': 'emulator-5554',
+        'appium:platformVersion': '12.0',
+        'appium:appPackage': 'id.superapp.courier.stg',
+        'appium:appActivity': 'id.superapp.courier.MainActivity',
+        'appium:noReset': false,
+        'appium:autoGrantPermissions': true
+
     }],
 
     //
@@ -111,7 +119,7 @@ export const config: Options.Testrunner = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver'],
+    services: ['appium'],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

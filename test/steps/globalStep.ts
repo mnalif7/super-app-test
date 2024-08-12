@@ -4,7 +4,7 @@ import { $ } from '@wdio/globals'
 
 class GlobalStep extends Step {
     public async back() {
-        await (globalObject.buttonBack).getInstance('androidEmulator').click()
+        await (globalObject.buttonBack).click()
     }
 }
 

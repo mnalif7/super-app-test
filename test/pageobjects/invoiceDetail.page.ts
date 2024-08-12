@@ -8,27 +8,27 @@ class invoiceDetailPage extends Page {
     driver = this.setDriver()
 
     public get buttonSiapDiterima() {
-        return multiremotebrowser.$('~Siap Diterima');
+        return $('~Siap Diterima');
     }
 
     public get dropdownPilihStatusPenerimaan() {
-        return multiremotebrowser.$('~Pilih status penerimaan');
+        return $('~Pilih status penerimaan');
     }
 
     public get optionDiterimaSemua() {
-        return multiremotebrowser.$('~Diterima Semua');
+        return $('~Diterima Semua');
     }
 
     public get optionDitolakSebagian() {
-        return multiremotebrowser.$('~Ditolak Sebagian');
+        return $('~Ditolak Sebagian');
     }
 
     public get optionDitolakSemua() {
-        return multiremotebrowser.$('~Ditolak Semua');
+        return $('~Ditolak Semua');
     }
 
     public get buttonKonfirmasi() {
-        return multiremotebrowser.$('~Konfirmasi');
+        return $('~Konfirmasi');
     }
 }
 

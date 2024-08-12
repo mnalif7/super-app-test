@@ -19,6 +19,8 @@
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.ts",
+    "wdio-android": "wdio run ./wdio.conf.android.ts",
+    "wdio-chrome": "wdio run ./wdio.conf.chrome.ts",
     "generateMochawesome": "marge path/to/results.json --reportTitle 'My Project Results'"
   },
   "dependencies": {

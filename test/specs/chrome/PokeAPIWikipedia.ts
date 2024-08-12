@@ -9,15 +9,15 @@ describe('Find Pikachu Wikipedia', () => {
         console.log('PIKACHU NAME IS = ' + res.data.name)
 
         browser.url('google.com');
-        const elem = await multiremotebrowser.$('#APjFqb')
-        await elem.getInstance('chrome').setValue(`${res.data.name} Wikipedia Indonesia`)
+        const elem = await $('#APjFqb')
+        await elem.setValue(`${res.data.name} Wikipedia Indonesia`)
         await browser.pause(10000)
 
-        const elem2 = await multiremotebrowser.$('//body/div[1]/div[3]/form[1]/div[1]/div[1]/div[4]/center[1]/input[1]')
-        await elem2.getInstance('chrome').click()
+        const elem2 = await $('//body/div[1]/div[3]/form[1]/div[1]/div[1]/div[4]/center[1]/input[1]')
+        await elem2.click()
         await browser.pause(10000)
 
-        // const myChromeBrowser = multiremotebrowser.getInstance('chrome')
+        // const myChromeBrowser = getInstance('chrome')
         // myChromeBrowser.url('google.com');
         // (await myChromeBrowser.$('/html[1]/body[1]/div[1]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/textarea[1]')).setValue(`${res.data.name} Wikipedia Indonesia`)
         // myChromeBrowser.pause(10000)

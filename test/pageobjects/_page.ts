@@ -7,6 +7,6 @@ export default class Page {
     driver: any;
 
     public setDriver() {
-        return multiremotebrowser.getInstance('androidEmulator')
+        // return multiremotebrowser.getInstance('androidEmulator')
     }
 }

@@ -5,6 +5,6 @@
 */
 export default class Step {
     public setDriver() {
-        return multiremotebrowser.getInstance('androidEmulator')
+        // return multiremotebrowser.getInstance('androidEmulator')
     }
 }

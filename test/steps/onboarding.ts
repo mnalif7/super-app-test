@@ -5,7 +5,7 @@ import onboardingPage from '../pageobjects/onboarding.page.js';
 class OnBoarding extends Step {
 
     public async clickMasukSekarang() {
-        await onboardingPage.btnMasukSekarang.getInstance('androidEmulator').click();
+        await onboardingPage.btnMasukSekarang.click();
     }
 
     public async allowLocation() {

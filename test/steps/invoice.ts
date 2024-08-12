@@ -7,19 +7,19 @@ import homePage from '../pageobjects/home.page.js';
  */
 class Invoice extends Step {
     public async selectInvoice(customer: string, store: string, id: string, paymentMethod: string) {
-        await homePage.cardInvoice(customer, store, id, paymentMethod).getInstance('androidEmulator').click();
+        await homePage.cardInvoice(customer, store, id, paymentMethod).click();
     }
 
     public async clickSearchInvoice() {
-        await homePage.textboxSearchInvoice.getInstance('androidEmulator').click();
+        await homePage.textboxSearchInvoice.click();
     }
 
     public async setSearchInvoice(keyword: string | number) {
-        await homePage.textboxSearchInvoiceAfterClicked.getInstance('androidEmulator').setValue(keyword);
+        await homePage.textboxSearchInvoiceAfterClicked.setValue(keyword);
     }
 
     public async tapSiapDiterima() {
-        await invoiceDetailPage.buttonSiapDiterima.getInstance('androidEmulator').click();
+        await invoiceDetailPage.buttonSiapDiterima.click();
     }
 
     public async searchInvoice(keyword: string | number) {
@@ -28,24 +28,24 @@ class Invoice extends Step {
     }
 
     public async selectStatusPenerimaan(status: string) {
-        await invoiceDetailPage.dropdownPilihStatusPenerimaan.getInstance('androidEmulator').click()
+        await invoiceDetailPage.dropdownPilihStatusPenerimaan.click()
         switch (status) {
             case 'Diterima Semua': {
-                await invoiceDetailPage.optionDiterimaSemua.getInstance('androidEmulator').click();
+                await invoiceDetailPage.optionDiterimaSemua.click();
                 break
             }
 
             case 'Ditolak Sebagian': {
-                await invoiceDetailPage.optionDitolakSebagian.getInstance('androidEmulator').click();
+                await invoiceDetailPage.optionDitolakSebagian.click();
                 break;
             }
 
             case 'Ditolak Semua': {
-                await invoiceDetailPage.optionDitolakSemua.getInstance('androidEmulator').click();
+                await invoiceDetailPage.optionDitolakSemua.click();
                 break;
             }
         }
-        await invoiceDetailPage.buttonKonfirmasi.getInstance('androidEmulator').click()
+        await invoiceDetailPage.buttonKonfirmasi.click()
     }
 }
 
